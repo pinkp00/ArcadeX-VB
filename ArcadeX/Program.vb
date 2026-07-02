@@ -233,7 +233,7 @@ Module VisualBasicGamingHub
                     Dim validSpot As Boolean = False
                     While Not validSpot
                         Console.Write(" >> " & guestName.ToUpper() & " (O), enter spot (1-9): ")
-                        Dim spotInput As String = Console.ReadLine()
+                        Dim spotInput = Console.ReadLine()
                         
                         If Integer.TryParse(spotInput, choice) AndAlso choice >= 1 AndAlso choice <= 9 Then
                             If board(choice) <> "X"c AndAlso board(choice) <> "O"c Then
@@ -313,7 +313,7 @@ Module VisualBasicGamingHub
         Return 0
     End Function
 
-    ' --- 3. HARDCORE GAME: BATTLESHIP COMMANDER (4x4 GRID) ---
+    ' --- 3. BATTLESHIP COMMANDER (4x4 GRID) ---
     Sub PlayBattleship()
         Console.Clear()
         Console.WriteLine("==========================================================")
@@ -323,12 +323,10 @@ Module VisualBasicGamingHub
         Console.WriteLine(" Tactical Objective: Destroy all 3 ships using 7 missiles!")
         Console.WriteLine("==========================================================")
 
-        ' 0 = Empty Ocean (~), 1 = Hidden Ship, 2 = Missed Shot (M), 3 = Hit Ship (H)
         Dim grid(3, 3) As Integer
         Dim rand As New Random()
         Dim shipsPlaced As Integer = 0
 
-        ' Place 3 random ships secretly
         While shipsPlaced < 3
             Dim r As Integer = rand.Next(0, 4)
             Dim c As Integer = rand.Next(0, 4)
@@ -340,29 +338,26 @@ Module VisualBasicGamingHub
 
         Dim missilesLeft As Integer = 7
         Dim shipsDestroyed As Integer = 0
-        Dim gameWon As Boolean = False
 
         While missilesLeft > 0 AndAlso shipsDestroyed < 3
-            ' Render Ocean Map Matrix
             Console.WriteLine(Environment.NewLine & "    COL:  1   2   3   4")
             Console.WriteLine("         ---------------")
             For i As Integer = 0 To 3
                 Console.Write(" ROW " & (i + 1) & ": ")
                 For j As Integer = 0 To 3
                     If grid(i, j) = 2 Then
-                        Console.Write("[M] ") ' Miss
+                        Console.Write("[M] ")
                     ElseIf grid(i, j) = 3 Then
-                        Console.Write("[💥] ") ' Hit
+                        Console.Write("[X] ")
                     Else
-                        Console.Write("[~] ") ' Hidden/Water
+                        Console.Write("[~] ")
                     End If
-                End For
+                Next
                 Console.WriteLine()
             Next
             Console.WriteLine("         ---------------")
             Console.WriteLine(" 🎯 Target Progress: " & shipsDestroyed & "/3 Ships Sunk | 🚀 Torpedoes Left: " & missilesLeft)
 
-            ' Input Coordinates
             Dim targetRow As Integer = -1
             Dim targetCol As Integer = -1
             Dim validInput As Boolean = False
@@ -375,7 +370,7 @@ Module VisualBasicGamingHub
 
                 If Integer.TryParse(rIn, targetRow) AndAlso Integer.TryParse(cIn, targetCol) Then
                     If targetRow >= 1 AndAlso targetRow <= 4 AndAlso targetCol >= 1 AndAlso targetCol <= 4 Then
-                        targetRow -= 1 ' Convert to 0-index
+                        targetRow -= 1
                         targetCol -= 1
                         
                         If grid(targetRow, targetCol) = 2 OrElse grid(targetRow, targetCol) = 3 Then
@@ -391,7 +386,6 @@ Module VisualBasicGamingHub
                 End If
             End While
 
-            ' Fire Missile Logic
             Console.Clear()
             Console.WriteLine("==========================================================")
             Console.WriteLine("                  TACTICAL COMBAT REPORT                  ")
@@ -411,7 +405,6 @@ Module VisualBasicGamingHub
             Console.WriteLine("==========================================================")
         End While
 
-        ' Match Finalization
         Console.Clear()
         Console.WriteLine("==========================================================")
         Console.WriteLine("                 OPERATION TERMINATED                     ")
@@ -425,20 +418,19 @@ Module VisualBasicGamingHub
             bshipLosses += 1
         End If
 
-        ' Show final true locations of remaining enemy ships
         Console.WriteLine(Environment.NewLine & " FINAL RECONNAISSANCE MAP (Actual Ship Locations):")
         Console.WriteLine("    COL:  1   2   3   4")
         For i As Integer = 0 To 3
             Console.Write(" ROW " & (i + 1) & ": ")
             For j As Integer = 0 To 3
                 If grid(i, j) = 1 Then
-                    Console.Write("[⛵] ") ' Survived Ship
+                    Console.Write("[O] ")
                 ElseIf grid(i, j) = 3 Then
-                    Console.Write("[💥] ") ' Sunk Ship
+                    Console.Write("[X] ")
                 Else
                     Console.Write("[~] ")
                 End If
-            End For
+            Next
             Console.WriteLine()
         Next
         
