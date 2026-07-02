@@ -3,7 +3,7 @@
 # Title: ARCADE-X: **The Ultimate Terminal Gaming Hub**
 
 # Overview
-Welcome to **ARCADE-X**, a lightweight, high-performance console gaming ecosystem built entirely using **Visual Basic ****.NET (VB.NET)**. Designed to run seamlessly in cloud environments like **GitHub Codespaces** and local terminals, this hub brings back the nostalgic retro arcade vibe with zero dependencies and crash-proof input validation.Whether you want to test your luck, outsmart a customized AI, or deploy strategic military tactics, ARCADE-X delivers a premium CLI (Command Line Interface) gaming experience.
+Welcome to **ARCADE-X**, a lightweight, high-performance console gaming ecosystem built entirely using **Visual Basic .NET (VB.NET)**. Designed to run seamlessly in cloud environments like **GitHub Codespaces** and local terminals, this hub brings back the nostalgic retro arcade vibe with zero dependencies and crash-proof input validation.Whether you want to test your luck, outsmart a customized AI, or deploy strategic military tactics, ARCADE-X delivers a premium CLI (Command Line Interface) gaming experience.
 
 # 🎮 Featured Games & Core Modules
 
@@ -31,4 +31,6 @@ Completely stripped of messy encoding characters to guarantee a flawless vertica
 Bashdotnet new console -lang "VB" -o ArcadeX
 # Swap the code inside Program.vb with the script, then run:
 cd ArcadeX
+
+
 dotnet run
