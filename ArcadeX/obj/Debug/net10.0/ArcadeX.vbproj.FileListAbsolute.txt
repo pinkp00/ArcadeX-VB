@@ -1,0 +1,5 @@
+/workspaces/ArcadeX-VB/ArcadeX/obj/Debug/net10.0/ArcadeX.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ArcadeX-VB/ArcadeX/obj/Debug/net10.0/ArcadeX.AssemblyInfoInputs.cache
+/workspaces/ArcadeX-VB/ArcadeX/obj/Debug/net10.0/ArcadeX.AssemblyInfo.vb
+/workspaces/ArcadeX-VB/ArcadeX/obj/Debug/net10.0/ArcadeX.vbproj.CoreCompileInputs.cache
+/workspaces/ArcadeX-VB/ArcadeX/obj/Debug/net10.0/ArcadeX.sourcelink.json
