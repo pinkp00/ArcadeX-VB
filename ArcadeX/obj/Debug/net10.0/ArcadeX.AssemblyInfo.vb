@@ -15,7 +15,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("ArcadeX"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ae051235b3c7b9f4ec9820cf7daabdfb61fa148"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+188e15915f6f7d038e0eb7c140f255357e7afc04"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("ArcadeX"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("ArcadeX"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
