@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade-X Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 ARCADE-X GAMING HUB 🎮</h1>
+            <p>Welcome! Ready to sync performance updates to the database?</p>
+        </header>
+
+        <div class="grid-cards">
+            <div class="card" onclick="startRPS()">
+                <div class="icon">🪨📄✂️</div>
+                <h3>Rock, Paper, Scissors</h3>
+                <p>Play against automated backend logic modules.</p>
+            </div>
+            <div class="card" onclick="startBattleship()">
+                <div class="icon">⚓💥🚢</div>
+                <h3>Battleship Combat</h3>
+                <p>Deploy and track target coordinates.</p>
+            </div>
+        </div>
+
+        <section class="scores-section">
+            <h2>🏆 LIVE SYSTEM PERFORMANCE SCOREBOARD</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Game Module</th>
+                        <th>Rounds Won 🟢</th>
+                        <th>Rounds Lost 🔴</th>
+                        <th>Tied Matches 🟡</th>
+                    </tr>
+                </thead>
+                <tbody id="scores-body">
+                    <tr>
+                        <td>Rock, Paper, Scissors</td>
+                        <td id="rps-w">0</td>
+                        <td id="rps-l">0</td>
+                        <td id="rps-t">0</td>
+                    </tr>
+                    <tr>
+                        <td>Battleship Matrix</td>
+                        <td id="bs-w">0</td>
+                        <td id="bs-l">0</td>
+                        <td id="bs-t">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
