@@ -1,36 +1,69 @@
 # ArcadeX-VB
 
-# Title: ARCADE-X: **The Ultimate Terminal Gaming Hub**
+# Arcade-X Gaming Hub
 
-# Overview
-Welcome to **ARCADE-X**, a lightweight, high-performance console gaming ecosystem built entirely using **Visual Basic .NET (VB.NET)**. Designed to run seamlessly in cloud environments like **GitHub Codespaces** and local terminals, this hub brings back the nostalgic retro arcade vibe with zero dependencies and crash-proof input validation.Whether you want to test your luck, outsmart a customized AI, or deploy strategic military tactics, ARCADE-X delivers a premium CLI (Command Line Interface) gaming experience.
+A comprehensive, full-stack web application designed for interactive gaming and real-time score management. Developed as a high-performance solution for automated gaming experiences.This project leverages the robust architecture of Visual Basic 6.0 (VB6) combined with modern backend integration for legacy system modernization.
 
-# 🎮 Featured Games & Core Modules
+## 🚀 Key Features
+* **Core Logic:** Visual Basic 6.0 (VB6)
+* **Interactive Gaming:** Includes three distinct game modes (Rock, Paper, Scissors, Tic-Tac-Toe, and Battleship).
+* **Full-Stack Architecture:** Built with a Spring Boot backend and a responsive web frontend.
+* **Real-time Data:** Seamless integration with MySQL for persistent user data and score tracking.
+* **Cloud-Ready:** Developed using GitHub Codespaces for a modern, scalable development environment.
 
-# ⚓ Battleship Commander (Tactical Naval Combat):
-Step into the shoes of a fleet admiral. The system secretly deploys enemy warships on a $4 \times 4$ multi-dimensional matrix grid. You have exactly 7 torpedoes to map the coordinates, calculate your trajectory, and destroy the enemy fleet before running out of ammo. Features real-time recon mapping tracking hits [💥] and misses [M].
+## 🛠 Tech Stack
 
-# ⭕ Tic-Tac-Toe Arena (Smart AI vs. Local Guest):
-No friends online? No problem. Play against a smart automated computer engine that dynamically takes up open spots. Want to challenge a friend? Switch seamlessly to the local 2-Player Guest Mode with personalized profile name tracking.
+* **Backend:** Java, Spring Boot
+* **Frontend:** HTML, CSS, JavaScript (app.js), VB6
+* **Database:** MySQL
+* **Environment:** GitHub Codespaces, Maven
 
-# ✊ Rock, Paper, Scissors (Instant Arena Match):
-A fast-paced arena combat module against the computer with automated win/loss logic to settle any score instantly.
+## 💻 How to Run
 
-# 📊 Live Performance Scoreboard:
-A dedicated session tracker that monitors active data, recording win percentages, losses, draws, and total ammunition stats for all modules in real-time.
+Follow these commands to launch the application and verify the database:
 
-# ⚡ Key Engineering Features100% Crash-Proof Architecture: 
-Built with rigorous integer parsing (Integer.TryParse) and Regular Expression (Regex) input sanitation. The system refuses to crash on empty inputs, letters, or invalid out-of-bounds coordinates.
-
-# Cloud-Optimized Workflow:
-Fully tailored to run inside GitHub Codespaces using the modern .NET Core SDK console environment.
-
-# Clean Text Layouts:
-Completely stripped of messy encoding characters to guarantee a flawless vertical alignment across all standard terminal screens.
-# 🛠️ Quick Start (Inside GitHub Codespaces)Simply open your Codespace terminal and type:
-Bashdotnet new console -lang "VB" -o ArcadeX
-# Swap the code inside Program.vb with the script, then run:
-cd ArcadeX
+### 1. Launch Backend Service
 
 
-dotnet run
+# Navigate to project directory
+
+
+mvnw spring-boot:run
+
+
+### 2. Database Management & Verification
+
+
+Open a separate bash terminal in Codespaces and access your MySQL database:
+
+
+# Login to MySQL
+
+
+mysql -u [your_username] -p
+
+
+# Switch to your project database
+
+
+USE defaultdb;
+
+
+# View all stored player scores
+
+
+SELECT * FROM scores;
+
+
+# Inspect database schema
+
+
+DESCRIBE scores;
+
+
+# Retrieve specific player data
+
+
+SELECT * FROM scores WHERE player_name = 'YourPlayerName';
+
+
